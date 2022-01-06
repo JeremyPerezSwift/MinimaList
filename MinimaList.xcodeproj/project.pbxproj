@@ -7,22 +7,68 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		291884FB2786C2BD009CF816 /* ListView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291884FA2786C2BD009CF816 /* ListView2.swift */; };
+		291884FD2786C383009CF816 /* RoundedCorner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291884FC2786C383009CF816 /* RoundedCorner.swift */; };
+		291884FF2786CEAE009CF816 /* NeumorphicInterEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291884FE2786CEAE009CF816 /* NeumorphicInterEffect.swift */; };
+		291885012786DDFF009CF816 /* ProgressBar2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291885002786DDFF009CF816 /* ProgressBar2.swift */; };
 		291F613F2785AC6800756679 /* MinimaListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291F613E2785AC6800756679 /* MinimaListApp.swift */; };
-		291F61412785AC6800756679 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291F61402785AC6800756679 /* ContentView.swift */; };
 		291F61432785AC6800756679 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 291F61422785AC6800756679 /* Assets.xcassets */; };
 		291F61462785AC6800756679 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 291F61452785AC6800756679 /* Preview Assets.xcassets */; };
-		291F61482785AC6800756679 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291F61472785AC6800756679 /* Persistence.swift */; };
-		291F614B2785AC6800756679 /* MinimaList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 291F61492785AC6800756679 /* MinimaList.xcdatamodeld */; };
+		291F61522785AC9100756679 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291F61512785AC9100756679 /* Home.swift */; };
+		291F61542785AD0E00756679 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291F61532785AD0E00756679 /* ContentView.swift */; };
+		291F61562785AD7200756679 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291F61552785AD7200756679 /* CustomTabView.swift */; };
+		291F61582785AE0C00756679 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291F61572785AE0C00756679 /* ToDo.swift */; };
+		291F615A2785C98200756679 /* CustomTabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291F61592785C98200756679 /* CustomTabItem.swift */; };
+		291F615D2785CE3000756679 /* CustomTabRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291F615C2785CE3000756679 /* CustomTabRouter.swift */; };
+		291F615F2785CF7100756679 /* Setting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291F615E2785CF7100756679 /* Setting.swift */; };
+		291F61612785D40A00756679 /* AddList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291F61602785D40A00756679 /* AddList.swift */; };
+		291F61642785D9CF00756679 /* NeumorphicEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291F61632785D9CF00756679 /* NeumorphicEffect.swift */; };
+		291F61662785DB2000756679 /* CheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291F61652785DB2000756679 /* CheckBoxView.swift */; };
+		291F61682785F12C00756679 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291F61672785F12C00756679 /* ListView.swift */; };
+		291F616A2785F25A00756679 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291F61692785F25A00756679 /* ProgressBar.swift */; };
+		2974267B27872E5100D42474 /* MinimaList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2974267927872E5100D42474 /* MinimaList.xcdatamodeld */; };
+		2974267D27872E7700D42474 /* CoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2974267C27872E7700D42474 /* CoreDataProvider.swift */; };
+		2974267F27872E9000D42474 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2974267E27872E9000D42474 /* BaseModel.swift */; };
+		2974268127872F5A00D42474 /* ListModel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2974268027872F5A00D42474 /* ListModel+Extension.swift */; };
+		2974268327872F6500D42474 /* TodoModel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2974268227872F6500D42474 /* TodoModel+Extension.swift */; };
+		297426862787309800D42474 /* AddListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297426852787309800D42474 /* AddListViewModel.swift */; };
+		29742688278730DC00D42474 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29742687278730DC00D42474 /* ListViewModel.swift */; };
+		2974268A2787320900D42474 /* AddTodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297426892787320900D42474 /* AddTodoViewModel.swift */; };
+		29B755632787356900681201 /* TodoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B755622787356900681201 /* TodoListViewModel.swift */; };
+		29B755652787484000681201 /* AddToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B755642787484000681201 /* AddToDo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		291884FA2786C2BD009CF816 /* ListView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView2.swift; sourceTree = "<group>"; };
+		291884FC2786C383009CF816 /* RoundedCorner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorner.swift; sourceTree = "<group>"; };
+		291884FE2786CEAE009CF816 /* NeumorphicInterEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphicInterEffect.swift; sourceTree = "<group>"; };
+		291885002786DDFF009CF816 /* ProgressBar2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar2.swift; sourceTree = "<group>"; };
 		291F613B2785AC6800756679 /* MinimaList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MinimaList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		291F613E2785AC6800756679 /* MinimaListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimaListApp.swift; sourceTree = "<group>"; };
-		291F61402785AC6800756679 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		291F61422785AC6800756679 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		291F61452785AC6800756679 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		291F61472785AC6800756679 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		291F614A2785AC6800756679 /* MinimaList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MinimaList.xcdatamodel; sourceTree = "<group>"; };
+		291F61512785AC9100756679 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		291F61532785AD0E00756679 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		291F61552785AD7200756679 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
+		291F61572785AE0C00756679 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
+		291F61592785C98200756679 /* CustomTabItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabItem.swift; sourceTree = "<group>"; };
+		291F615C2785CE3000756679 /* CustomTabRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabRouter.swift; sourceTree = "<group>"; };
+		291F615E2785CF7100756679 /* Setting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Setting.swift; sourceTree = "<group>"; };
+		291F61602785D40A00756679 /* AddList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddList.swift; sourceTree = "<group>"; };
+		291F61632785D9CF00756679 /* NeumorphicEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphicEffect.swift; sourceTree = "<group>"; };
+		291F61652785DB2000756679 /* CheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxView.swift; sourceTree = "<group>"; };
+		291F61672785F12C00756679 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		291F61692785F25A00756679 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		2974267A27872E5100D42474 /* MinimaList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MinimaList.xcdatamodel; sourceTree = "<group>"; };
+		2974267C27872E7700D42474 /* CoreDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProvider.swift; sourceTree = "<group>"; };
+		2974267E27872E9000D42474 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		2974268027872F5A00D42474 /* ListModel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListModel+Extension.swift"; sourceTree = "<group>"; };
+		2974268227872F6500D42474 /* TodoModel+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodoModel+Extension.swift"; sourceTree = "<group>"; };
+		297426852787309800D42474 /* AddListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListViewModel.swift; sourceTree = "<group>"; };
+		29742687278730DC00D42474 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		297426892787320900D42474 /* AddTodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoViewModel.swift; sourceTree = "<group>"; };
+		29B755622787356900681201 /* TodoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewModel.swift; sourceTree = "<group>"; };
+		29B755642787484000681201 /* AddToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +82,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		291884F92786C295009CF816 /* Elements */ = {
+			isa = PBXGroup;
+			children = (
+				291F61692785F25A00756679 /* ProgressBar.swift */,
+				291885002786DDFF009CF816 /* ProgressBar2.swift */,
+				291F61672785F12C00756679 /* ListView.swift */,
+				291884FA2786C2BD009CF816 /* ListView2.swift */,
+				291F61652785DB2000756679 /* CheckBoxView.swift */,
+				291F61632785D9CF00756679 /* NeumorphicEffect.swift */,
+				291884FE2786CEAE009CF816 /* NeumorphicInterEffect.swift */,
+				291884FC2786C383009CF816 /* RoundedCorner.swift */,
+			);
+			path = Elements;
+			sourceTree = "<group>";
+		};
 		291F61322785AC6800756679 = {
 			isa = PBXGroup;
 			children = (
@@ -55,11 +116,13 @@
 		291F613D2785AC6800756679 /* MinimaList */ = {
 			isa = PBXGroup;
 			children = (
+				2974267127872B3400D42474 /* Model */,
+				291F61622785D40D00756679 /* View */,
+				291F615B2785CE0B00756679 /* CustomTabBar */,
+				2974268427872F9E00D42474 /* Viewmodel */,
+				291F61532785AD0E00756679 /* ContentView.swift */,
 				291F613E2785AC6800756679 /* MinimaListApp.swift */,
-				291F61402785AC6800756679 /* ContentView.swift */,
 				291F61422785AC6800756679 /* Assets.xcassets */,
-				291F61472785AC6800756679 /* Persistence.swift */,
-				291F61492785AC6800756679 /* MinimaList.xcdatamodeld */,
 				291F61442785AC6800756679 /* Preview Content */,
 			);
 			path = MinimaList;
@@ -71,6 +134,52 @@
 				291F61452785AC6800756679 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		291F615B2785CE0B00756679 /* CustomTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				291F61552785AD7200756679 /* CustomTabView.swift */,
+				291F61592785C98200756679 /* CustomTabItem.swift */,
+				291F615C2785CE3000756679 /* CustomTabRouter.swift */,
+			);
+			path = CustomTabBar;
+			sourceTree = "<group>";
+		};
+		291F61622785D40D00756679 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				291884F92786C295009CF816 /* Elements */,
+				291F61512785AC9100756679 /* Home.swift */,
+				291F61572785AE0C00756679 /* ToDo.swift */,
+				291F615E2785CF7100756679 /* Setting.swift */,
+				291F61602785D40A00756679 /* AddList.swift */,
+				29B755642787484000681201 /* AddToDo.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2974267127872B3400D42474 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2974267927872E5100D42474 /* MinimaList.xcdatamodeld */,
+				2974267C27872E7700D42474 /* CoreDataProvider.swift */,
+				2974267E27872E9000D42474 /* BaseModel.swift */,
+				2974268027872F5A00D42474 /* ListModel+Extension.swift */,
+				2974268227872F6500D42474 /* TodoModel+Extension.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2974268427872F9E00D42474 /* Viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				297426852787309800D42474 /* AddListViewModel.swift */,
+				29742687278730DC00D42474 /* ListViewModel.swift */,
+				297426892787320900D42474 /* AddTodoViewModel.swift */,
+				29B755622787356900681201 /* TodoListViewModel.swift */,
+			);
+			path = Viewmodel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,10 +252,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				291F61482785AC6800756679 /* Persistence.swift in Sources */,
-				291F61412785AC6800756679 /* ContentView.swift in Sources */,
-				291F614B2785AC6800756679 /* MinimaList.xcdatamodeld in Sources */,
+				291884FB2786C2BD009CF816 /* ListView2.swift in Sources */,
+				291F61522785AC9100756679 /* Home.swift in Sources */,
+				29B755632787356900681201 /* TodoListViewModel.swift in Sources */,
+				291F61682785F12C00756679 /* ListView.swift in Sources */,
+				297426862787309800D42474 /* AddListViewModel.swift in Sources */,
+				291F61612785D40A00756679 /* AddList.swift in Sources */,
+				291F615A2785C98200756679 /* CustomTabItem.swift in Sources */,
+				291F615D2785CE3000756679 /* CustomTabRouter.swift in Sources */,
+				291F616A2785F25A00756679 /* ProgressBar.swift in Sources */,
+				291884FF2786CEAE009CF816 /* NeumorphicInterEffect.swift in Sources */,
+				2974268A2787320900D42474 /* AddTodoViewModel.swift in Sources */,
+				2974267B27872E5100D42474 /* MinimaList.xcdatamodeld in Sources */,
+				291884FD2786C383009CF816 /* RoundedCorner.swift in Sources */,
+				291F61562785AD7200756679 /* CustomTabView.swift in Sources */,
+				291F61582785AE0C00756679 /* ToDo.swift in Sources */,
+				291F61662785DB2000756679 /* CheckBoxView.swift in Sources */,
+				29742688278730DC00D42474 /* ListViewModel.swift in Sources */,
+				2974267D27872E7700D42474 /* CoreDataProvider.swift in Sources */,
+				2974267F27872E9000D42474 /* BaseModel.swift in Sources */,
+				291885012786DDFF009CF816 /* ProgressBar2.swift in Sources */,
+				291F61542785AD0E00756679 /* ContentView.swift in Sources */,
+				2974268327872F6500D42474 /* TodoModel+Extension.swift in Sources */,
 				291F613F2785AC6800756679 /* MinimaListApp.swift in Sources */,
+				291F61642785D9CF00756679 /* NeumorphicEffect.swift in Sources */,
+				2974268127872F5A00D42474 /* ListModel+Extension.swift in Sources */,
+				29B755652787484000681201 /* AddToDo.swift in Sources */,
+				291F615F2785CF7100756679 /* Setting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,12 +483,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		291F61492785AC6800756679 /* MinimaList.xcdatamodeld */ = {
+		2974267927872E5100D42474 /* MinimaList.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				291F614A2785AC6800756679 /* MinimaList.xcdatamodel */,
+				2974267A27872E5100D42474 /* MinimaList.xcdatamodel */,
 			);
-			currentVersion = 291F614A2785AC6800756679 /* MinimaList.xcdatamodel */;
+			currentVersion = 2974267A27872E5100D42474 /* MinimaList.xcdatamodel */;
 			path = MinimaList.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
