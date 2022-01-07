@@ -10,6 +10,7 @@ import SwiftUI
 struct AddList: View {
     @Environment(\.dismiss) var dismiss
     @StateObject private var addListViewModel = AddListViewModel()
+    @StateObject private var listListViewModel = ListListViewModel()
     
     var body: some View {
         
@@ -56,7 +57,33 @@ struct AddList: View {
                 }
                 .padding(.vertical)
                 
-                Spacer()
+                List {
+                    ForEach(listListViewModel.lists, id: \.id) { list in
+                        ZStack(alignment: .leading) {
+                            ListArchiveView(list: list, ontap: { isChecked in
+                                print("DEBUG: List \(list.title)")
+                                listListViewModel.updateCompletedList(vm: list)
+                                dismiss()
+                            })
+                                .padding(.vertical, 10)
+                        }
+                        
+                        .listStyle(PlainListStyle())
+                        .background(Color("MercuryList"))
+                        .listRowBackground(Color.clear)
+                        .listRowSeparatorTint(Color.clear)
+                        .onAppear(perform: {
+                            UITableView.appearance().separatorStyle = .none
+                            UITableView.appearance().separatorColor = .clear
+                        })
+                    }
+//                    .onDelete(perform: deleteList)
+
+                }
+                .listStyle(PlainListStyle())
+                .onAppear {
+                    listListViewModel.getAllMovies(typeCompleted: true)
+                }
                 
             }
         }

@@ -24,7 +24,7 @@ struct CustomTabItem: View {
             
             Spacer()
         }
-        .foregroundColor(tabBarRouter.currentPage == assignedPage ? Color("RedList") : Color("BlackList"))
+        .foregroundColor(tabBarRouter.currentPage == assignedPage ? ThemesColors.shared.color : Color("BlackList"))
         .onTapGesture {
             tabBarRouter.currentPage = assignedPage
         }
@@ -40,7 +40,7 @@ struct CustomPlusTabItem: View {
     var body: some View {
         ZStack {
             Rectangle()
-                .foregroundColor(Color("RedList"))
+                .foregroundColor(ThemesColors.shared.color)
                 .frame(width: width, height: height)
                 .cornerRadius(15)
 //            Circle()

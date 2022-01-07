@@ -77,6 +77,18 @@ class TodoListViewModel: ObservableObject {
         
     }
     
+    func toggleAllTodoComplete(todos: [TodoViewModel]) {
+        
+        for todo in todos {
+            let todo_M: TodoModel? = TodoModel.byId(id: todo.id)
+            if let todo_M = todo_M {
+                todo_M.completed = false
+                todo_M.save()
+            }
+        }
+
+    }
+    
     func updateProgressBarList(vm: ListViewModel) {
         let list: ListModel? = ListModel.byId(id: vm.id)
         if let list = list {
@@ -90,7 +102,7 @@ class TodoListViewModel: ObservableObject {
         let list: ListModel? = ListModel.byId(id: vm.id)
         if let list = list {
             list.completed = true
-            
+            list.progressValue = 0.0
             list.save()
         }
     }

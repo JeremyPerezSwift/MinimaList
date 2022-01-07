@@ -23,7 +23,7 @@ struct Home: View {
         indexSet.forEach { index in
             let list = listListViewModel.lists[index]
             listListViewModel.deleteMovie(list_P: list)
-            listListViewModel.getAllMovies()
+            listListViewModel.getAllMovies(typeCompleted: false)
         }
     }
     
@@ -48,13 +48,43 @@ struct Home: View {
                     
                     Spacer(minLength: 0)
                     
-                    Button(action: {}) {
+                    Menu {
+                        
+                        Button {
+                            listListViewModel.filterListByDate(lists: listListViewModel.lists)
+                        } label: {
+                            Text("By date")
+                        }
+                        
+                        Button {
+                            listListViewModel.filterListByTitle(lists: listListViewModel.lists)
+                        } label: {
+                            Text("By title")
+                        }
+                        
+                        Button {
+                            listListViewModel.filterListByCompleted(lists: listListViewModel.lists)
+                        } label: {
+                            Text("By completed")
+                        }
+
+                    } label: {
                         Image(systemName: "slider.horizontal.3")
                             .font(.body)
-                            .foregroundColor(Color("RedList"))
+                            .foregroundColor(ThemesColors.shared.color)
                     }
                     .frame(width: 40, height: 40)
                     .neumorphicEffect(fillColor: Color("MercuryList"), cornerRdius: 10)
+                    
+//                    Button(action: {
+//                        listListViewModel.filterList(lists: listListViewModel.lists)
+//                    }) {
+//                        Image(systemName: "slider.horizontal.3")
+//                            .font(.body)
+//                            .foregroundColor(Color("RedList"))
+//                    }
+//                    .frame(width: 40, height: 40)
+//                    .neumorphicEffect(fillColor: Color("MercuryList"), cornerRdius: 10)
                 }
                 .foregroundColor(.black)
                 .padding(.top, 0)
@@ -92,14 +122,18 @@ struct Home: View {
                 }
                 .listStyle(PlainListStyle())
                 .onAppear {
-                    listListViewModel.getAllMovies()
+                    listListViewModel.getAllMovies(typeCompleted: false)
                 }
                 
+            }
+            
+            if listListViewModel.lists.count == 0 {
+                ModalBgView()
             }
 //            .padding()
         }
         .onChange(of: refreshList, perform: { newValue in
-            listListViewModel.getAllMovies()
+            listListViewModel.getAllMovies(typeCompleted: false)
         })
         .background(Color("MercuryList"))
         

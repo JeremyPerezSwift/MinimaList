@@ -25,7 +25,7 @@ struct ListView2: View {
                 
                 Image(systemName: "arrow.right")
                     .font(.title3)
-                    .foregroundColor(Color("RedList"))
+                    .foregroundColor(ThemesColors.shared.color)
             }
             .padding()
             

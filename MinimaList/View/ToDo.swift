@@ -39,7 +39,7 @@ struct ToDo: View {
                         
                         Spacer()
                         
-                        Text("List of todo")
+                        Text(list.title)
                             .font(.title3)
                             .bold()
                             .fixedSize(horizontal: false, vertical: true)
@@ -47,15 +47,16 @@ struct ToDo: View {
                         
                         Spacer()
                         
+                        
                         Button(action: {
                             isShowPopUp.toggle()
                         }) {
                             Image(systemName: "plus")
                                 .font(.body)
-                                .foregroundColor(Color("RedList"))
+                                .foregroundColor(Color("MercuryList"))
                         }
                         .frame(width: 40, height: 40)
-                        .neumorphicEffect(fillColor: Color("MercuryList"), cornerRdius: 10)
+                        .neumorphicEffect(fillColor: Color("RedList"), cornerRdius: 10)
                     }
                     .padding(.horizontal)
                     .padding(.top)
@@ -67,6 +68,35 @@ struct ToDo: View {
                                 .padding(.horizontal)
                             
                             Spacer()
+                            
+                            
+                            Menu {
+                                
+                                Button {
+                                    
+                                } label: {
+                                    Text("By date")
+                                }
+                                
+                                Button {
+                                    
+                                } label: {
+                                    Text("By title")
+                                }
+                                
+                                Button {
+                                    
+                                } label: {
+                                    Text("By completed")
+                                }
+
+                            } label: {
+                                Image(systemName: "slider.horizontal.3")
+                                    .font(.body)
+                                    .foregroundColor(Color("RedList"))
+                            }
+                            .frame(width: 40, height: 40)
+                            .neumorphicEffect(fillColor: Color("MercuryList"), cornerRdius: 10)
                         }
                         .padding(.top, 10)
                         .padding(.horizontal)
@@ -91,10 +121,6 @@ struct ToDo: View {
                                     self.todoListVM.toggleComplete(todo: todo, isChecked: isChecked)
                                     self.todoListVM.getTodosByListWithCheck(vm: list)
                                     isCheckPopup = true
-//                                    if todoListVM.progressValue == 1 {
-//                                        isCheckPopup.toggle()
-//                                        print("DEBUG: progressValue true \(isCheckPopup)")
-//                                    }
                                 }, todo: todo)
                                     .padding(.vertical, 10)
                                 
@@ -121,6 +147,8 @@ struct ToDo: View {
                         .onTapGesture {
                             isCheckPopup = false
                             todoListVM.updateCompletedList(vm: list)
+                            todoListVM.toggleAllTodoComplete(todos: todoListVM.todos)
+                            presentationMode.wrappedValue.dismiss()
                         }
                 }
                 

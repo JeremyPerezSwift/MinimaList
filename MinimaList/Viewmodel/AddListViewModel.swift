@@ -16,6 +16,7 @@ class AddListViewModel: ObservableObject {
         
         list.title = title
         list.progressValue = 0.0
+        list.publishedAt = Date()
 
         list.save()
     }

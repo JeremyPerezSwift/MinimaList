@@ -24,7 +24,6 @@
 		291F61612785D40A00756679 /* AddList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291F61602785D40A00756679 /* AddList.swift */; };
 		291F61642785D9CF00756679 /* NeumorphicEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291F61632785D9CF00756679 /* NeumorphicEffect.swift */; };
 		291F61662785DB2000756679 /* CheckBoxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291F61652785DB2000756679 /* CheckBoxView.swift */; };
-		291F61682785F12C00756679 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291F61672785F12C00756679 /* ListView.swift */; };
 		291F616A2785F25A00756679 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291F61692785F25A00756679 /* ProgressBar.swift */; };
 		2974267B27872E5100D42474 /* MinimaList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2974267927872E5100D42474 /* MinimaList.xcdatamodeld */; };
 		2974267D27872E7700D42474 /* CoreDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2974267C27872E7700D42474 /* CoreDataProvider.swift */; };
@@ -40,6 +39,11 @@
 		29CCF9DC27883D4E00AB3F6F /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CCF9DB27883D4E00AB3F6F /* LottieView.swift */; };
 		29CCF9DF2788406E00AB3F6F /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CCF9DE2788406E00AB3F6F /* ModalView.swift */; };
 		29CCF9E32788422700AB3F6F /* Test.json in Resources */ = {isa = PBXBuildFile; fileRef = 29CCF9E22788422700AB3F6F /* Test.json */; };
+		29E4943327887A3C00ACFDAE /* ListArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E4943227887A3C00ACFDAE /* ListArchiveView.swift */; };
+		29E49436278898A900ACFDAE /* ThemesColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E49435278898A900ACFDAE /* ThemesColors.swift */; };
+		29E494382788A38000ACFDAE /* bg.json in Resources */ = {isa = PBXBuildFile; fileRef = 29E494372788A38000ACFDAE /* bg.json */; };
+		29E4943A2788A40E00ACFDAE /* ModalBgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E494392788A40E00ACFDAE /* ModalBgView.swift */; };
+		29E4943D2788A61400ACFDAE /* LottieView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E4943C2788A61400ACFDAE /* LottieView2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,7 +65,6 @@
 		291F61602785D40A00756679 /* AddList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddList.swift; sourceTree = "<group>"; };
 		291F61632785D9CF00756679 /* NeumorphicEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphicEffect.swift; sourceTree = "<group>"; };
 		291F61652785DB2000756679 /* CheckBoxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBoxView.swift; sourceTree = "<group>"; };
-		291F61672785F12C00756679 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		291F61692785F25A00756679 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		2974267A27872E5100D42474 /* MinimaList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MinimaList.xcdatamodel; sourceTree = "<group>"; };
 		2974267C27872E7700D42474 /* CoreDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProvider.swift; sourceTree = "<group>"; };
@@ -77,6 +80,11 @@
 		29CCF9DE2788406E00AB3F6F /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 		29CCF9E22788422700AB3F6F /* Test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Test.json; sourceTree = "<group>"; };
 		29CCF9E427884F1F00AB3F6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		29E4943227887A3C00ACFDAE /* ListArchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListArchiveView.swift; sourceTree = "<group>"; };
+		29E49435278898A900ACFDAE /* ThemesColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesColors.swift; sourceTree = "<group>"; };
+		29E494372788A38000ACFDAE /* bg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bg.json; sourceTree = "<group>"; };
+		29E494392788A40E00ACFDAE /* ModalBgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalBgView.swift; sourceTree = "<group>"; };
+		29E4943C2788A61400ACFDAE /* LottieView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,17 +102,15 @@
 		291884F92786C295009CF816 /* Elements */ = {
 			isa = PBXGroup;
 			children = (
+				29E4943B2788A5DD00ACFDAE /* Lottie */,
 				291F61692785F25A00756679 /* ProgressBar.swift */,
 				291885002786DDFF009CF816 /* ProgressBar2.swift */,
-				291F61672785F12C00756679 /* ListView.swift */,
 				291884FA2786C2BD009CF816 /* ListView2.swift */,
+				29E4943227887A3C00ACFDAE /* ListArchiveView.swift */,
 				291F61652785DB2000756679 /* CheckBoxView.swift */,
 				291F61632785D9CF00756679 /* NeumorphicEffect.swift */,
 				291884FE2786CEAE009CF816 /* NeumorphicInterEffect.swift */,
 				291884FC2786C383009CF816 /* RoundedCorner.swift */,
-				29CCF9DB27883D4E00AB3F6F /* LottieView.swift */,
-				29CCF9DE2788406E00AB3F6F /* ModalView.swift */,
-				29CCF9E22788422700AB3F6F /* Test.json */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -128,6 +134,7 @@
 		291F613D2785AC6800756679 /* MinimaList */ = {
 			isa = PBXGroup;
 			children = (
+				29E494342788988A00ACFDAE /* Utils */,
 				29CCF9E427884F1F00AB3F6F /* Info.plist */,
 				2974267127872B3400D42474 /* Model */,
 				291F61622785D40D00756679 /* View */,
@@ -195,6 +202,27 @@
 			path = Viewmodel;
 			sourceTree = "<group>";
 		};
+		29E494342788988A00ACFDAE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				29E49435278898A900ACFDAE /* ThemesColors.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		29E4943B2788A5DD00ACFDAE /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				29CCF9DB27883D4E00AB3F6F /* LottieView.swift */,
+				29E4943C2788A61400ACFDAE /* LottieView2.swift */,
+				29CCF9DE2788406E00AB3F6F /* ModalView.swift */,
+				29CCF9E22788422700AB3F6F /* Test.json */,
+				29E494392788A40E00ACFDAE /* ModalBgView.swift */,
+				29E494372788A38000ACFDAE /* bg.json */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -259,6 +287,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29E494382788A38000ACFDAE /* bg.json in Resources */,
 				29CCF9E32788422700AB3F6F /* Test.json in Resources */,
 				291F61462785AC6800756679 /* Preview Assets.xcassets in Resources */,
 				291F61432785AC6800756679 /* Assets.xcassets in Resources */,
@@ -275,11 +304,14 @@
 				291884FB2786C2BD009CF816 /* ListView2.swift in Sources */,
 				291F61522785AC9100756679 /* Home.swift in Sources */,
 				29B755632787356900681201 /* TodoListViewModel.swift in Sources */,
-				291F61682785F12C00756679 /* ListView.swift in Sources */,
+				29E49436278898A900ACFDAE /* ThemesColors.swift in Sources */,
 				297426862787309800D42474 /* AddListViewModel.swift in Sources */,
 				291F61612785D40A00756679 /* AddList.swift in Sources */,
 				291F615A2785C98200756679 /* CustomTabItem.swift in Sources */,
 				291F615D2785CE3000756679 /* CustomTabRouter.swift in Sources */,
+				29E4943327887A3C00ACFDAE /* ListArchiveView.swift in Sources */,
+				29E4943A2788A40E00ACFDAE /* ModalBgView.swift in Sources */,
+				29E4943D2788A61400ACFDAE /* LottieView2.swift in Sources */,
 				291F616A2785F25A00756679 /* ProgressBar.swift in Sources */,
 				291884FF2786CEAE009CF816 /* NeumorphicInterEffect.swift in Sources */,
 				2974268A2787320900D42474 /* AddTodoViewModel.swift in Sources */,

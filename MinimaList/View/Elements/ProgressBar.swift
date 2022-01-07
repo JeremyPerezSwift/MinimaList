@@ -15,10 +15,10 @@ struct ProgressBar: View {
             ZStack(alignment: .leading) {
                 Rectangle().frame(width: geo.size.width, height: geo.size.height)
                     .opacity(1)
-                    .foregroundColor(Color("SilverList"))
+                    .foregroundColor(ThemesColors.shared.colorAlpha)
                 
                 Rectangle().frame(width: self.getProgressWidth(geo: geo), height: geo.size.height)
-                    .foregroundColor(Color("RedList"))
+                    .foregroundColor(ThemesColors.shared.color)
                     .animation(.linear)
             }
 //            .cornerRadius(10)

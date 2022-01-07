@@ -41,7 +41,7 @@ struct CustomTabView: View {
                         .padding(.top)
                     
                     CustomPlusTabItem(width: geometry.size.width / 8, height: geometry.size.width / 8, systemIconName: "plus", action: showPopUp)
-                        .neumorphicEffect(fillColor: Color("RedList"), cornerRdius: 15)
+                        .neumorphicEffect(fillColor: ThemesColors.shared.color, cornerRdius: 15)
                         .padding(.horizontal, geometry.size.width / 6)
                         .offset(y: -((geometry.size.height / 9) / 2) - 8)
                     
