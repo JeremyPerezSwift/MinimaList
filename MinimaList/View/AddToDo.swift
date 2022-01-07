@@ -13,6 +13,8 @@ struct AddToDo: View {
     @StateObject private var addTodoViewModel = AddTodoViewModel()
     let list: ListViewModel
     
+    @State var text = ""
+    
     var body: some View {
         
         ZStack {
@@ -33,7 +35,7 @@ struct AddToDo: View {
                 
                 HStack {
                     
-                    TextField("Enter title", text: $addTodoViewModel.title)
+                    TextField("Enter title", text: $text)
                         .padding()
                         .neumorphicEffect(fillColor: Color("MercuryList"), cornerRdius: 10)
                         .frame(width: UIScreen.main.bounds.width / 1.1, height: 60)
@@ -43,7 +45,9 @@ struct AddToDo: View {
                 
                 HStack {
                     Button(action: {
-                        if addTodoViewModel.title != "" {
+                        if text != "" {
+                            print("DEBUG: AddTodo \(text)")
+                            addTodoViewModel.title = text
                             addTodoViewModel.addTodoForList(vm: list)
                             dismiss()
                         }

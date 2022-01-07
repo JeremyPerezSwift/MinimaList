@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="21A559" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="ListModel" representedClassName="ListModel" syncable="YES" codeGenerationType="class">
+        <attribute name="completed" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="progressValue" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="title" attributeType="String"/>
         <relationship name="todos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TodoModel" inverseName="listmodel" inverseEntity="TodoModel"/>
     </entity>
@@ -10,7 +12,7 @@
         <relationship name="listmodel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ListModel" inverseName="todos" inverseEntity="ListModel"/>
     </entity>
     <elements>
-        <element name="ListModel" positionX="-45" positionY="0" width="128" height="59"/>
+        <element name="ListModel" positionX="-45" positionY="0" width="128" height="89"/>
         <element name="TodoModel" positionX="-18" positionY="36" width="128" height="74"/>
     </elements>
 </model>

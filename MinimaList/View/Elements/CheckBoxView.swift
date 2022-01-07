@@ -11,6 +11,8 @@ struct CheckboxView: View {
     @State var isChecked: Bool
     var ontap: (_ isChecked: Bool) -> Void
     
+    let todo: TodoViewModel
+    
     func toggle() {
         self.isChecked.toggle()
         self.ontap(self.isChecked)
@@ -34,7 +36,7 @@ struct CheckboxView: View {
             )
             
             
-            Text("Test button")
+            Text(todo.title)
                 .padding(.horizontal, 10)
             
             Spacer()

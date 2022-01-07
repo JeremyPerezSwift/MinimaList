@@ -12,11 +12,17 @@ class ListListViewModel: ObservableObject {
     @Published var lists = [ListViewModel]()
     
     func getAllMovies() {
-        
+        lists.removeAll()
         print("DEBUG: getAllMovies")
         let lists: [ListModel] = ListModel.all()
         DispatchQueue.main.async {
-            self.lists = lists.map(ListViewModel.init)
+            let lists_M = lists.map(ListViewModel.init)
+            
+            for list in lists_M {
+                if list.completed == false {
+                    self.lists.append(list)
+                }
+            }
         }
     }
     
@@ -40,5 +46,16 @@ struct ListViewModel {
         return list.title ?? ""
     }
     
+    var completed: Bool {
+        return list.completed
+    }
+    
+    var progressValue: Float {
+        return list.progressValue
+    }
+    
+    var progressDisplayValue: String {
+        return progressValue > 0.0 ? "\(Int(progressValue * 100)) %" : "0%"
+    }
     
 }

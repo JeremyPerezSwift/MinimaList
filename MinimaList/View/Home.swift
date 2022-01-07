@@ -8,14 +8,9 @@
 import SwiftUI
 
 struct Home: View {
-//    @Binding var listListViewModel: ListListViewModel
     @StateObject private var listListViewModel = ListListViewModel()
     
-    @Binding var refreshList: Bool {
-        didSet {
-            print("DEBUG: refreshList")
-        }
-    }
+    @Binding var refreshList: Bool
     
 //    init() {
 //        UITableView.appearance().backgroundColor = .clear
@@ -99,11 +94,11 @@ struct Home: View {
                 .onAppear {
                     listListViewModel.getAllMovies()
                 }
+                
             }
 //            .padding()
         }
         .onChange(of: refreshList, perform: { newValue in
-            print("dEBUG: refreshList \(refreshList)")
             listListViewModel.getAllMovies()
         })
         .background(Color("MercuryList"))

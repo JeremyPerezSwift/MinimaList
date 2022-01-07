@@ -27,4 +27,19 @@ class CoreDataProvider {
         return persistentContainer.viewContext
     }
     
+    func updateTodo(id: NSManagedObjectID, completed: Bool) {
+        let fetchRequest: NSFetchRequest<TodoModel> = TodoModel.fetchRequest()
+        
+        fetchRequest.predicate = NSPredicate.init(format: "id=%@", id)
+        
+        do {
+            let todo = try self.viewContext.fetch(fetchRequest).first
+            todo?.completed = completed
+            
+            try self.viewContext.save()
+        } catch {
+            fatalError("DEBUG: Failed to update Todo \(error)")
+        }
+    }
+    
 }

@@ -15,6 +15,7 @@ class AddListViewModel: ObservableObject {
         let list = ListModel(context: ListModel.viewContext)
         
         list.title = title
+        list.progressValue = 0.0
 
         list.save()
     }

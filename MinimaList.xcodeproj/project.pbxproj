@@ -36,6 +36,10 @@
 		2974268A2787320900D42474 /* AddTodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297426892787320900D42474 /* AddTodoViewModel.swift */; };
 		29B755632787356900681201 /* TodoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B755622787356900681201 /* TodoListViewModel.swift */; };
 		29B755652787484000681201 /* AddToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B755642787484000681201 /* AddToDo.swift */; };
+		29CCF9DA27883CE900AB3F6F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 29CCF9D927883CE900AB3F6F /* Lottie */; };
+		29CCF9DC27883D4E00AB3F6F /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CCF9DB27883D4E00AB3F6F /* LottieView.swift */; };
+		29CCF9DF2788406E00AB3F6F /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CCF9DE2788406E00AB3F6F /* ModalView.swift */; };
+		29CCF9E32788422700AB3F6F /* Test.json in Resources */ = {isa = PBXBuildFile; fileRef = 29CCF9E22788422700AB3F6F /* Test.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +73,10 @@
 		297426892787320900D42474 /* AddTodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoViewModel.swift; sourceTree = "<group>"; };
 		29B755622787356900681201 /* TodoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewModel.swift; sourceTree = "<group>"; };
 		29B755642787484000681201 /* AddToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDo.swift; sourceTree = "<group>"; };
+		29CCF9DB27883D4E00AB3F6F /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		29CCF9DE2788406E00AB3F6F /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
+		29CCF9E22788422700AB3F6F /* Test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Test.json; sourceTree = "<group>"; };
+		29CCF9E427884F1F00AB3F6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29CCF9DA27883CE900AB3F6F /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +102,9 @@
 				291F61632785D9CF00756679 /* NeumorphicEffect.swift */,
 				291884FE2786CEAE009CF816 /* NeumorphicInterEffect.swift */,
 				291884FC2786C383009CF816 /* RoundedCorner.swift */,
+				29CCF9DB27883D4E00AB3F6F /* LottieView.swift */,
+				29CCF9DE2788406E00AB3F6F /* ModalView.swift */,
+				29CCF9E22788422700AB3F6F /* Test.json */,
 			);
 			path = Elements;
 			sourceTree = "<group>";
@@ -116,6 +128,7 @@
 		291F613D2785AC6800756679 /* MinimaList */ = {
 			isa = PBXGroup;
 			children = (
+				29CCF9E427884F1F00AB3F6F /* Info.plist */,
 				2974267127872B3400D42474 /* Model */,
 				291F61622785D40D00756679 /* View */,
 				291F615B2785CE0B00756679 /* CustomTabBar */,
@@ -198,6 +211,9 @@
 			dependencies = (
 			);
 			name = MinimaList;
+			packageProductDependencies = (
+				29CCF9D927883CE900AB3F6F /* Lottie */,
+			);
 			productName = MinimaList;
 			productReference = 291F613B2785AC6800756679 /* MinimaList.app */;
 			productType = "com.apple.product-type.application";
@@ -226,6 +242,9 @@
 				Base,
 			);
 			mainGroup = 291F61322785AC6800756679;
+			packageReferences = (
+				29CCF9D827883CE900AB3F6F /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 291F613C2785AC6800756679 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -240,6 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29CCF9E32788422700AB3F6F /* Test.json in Resources */,
 				291F61462785AC6800756679 /* Preview Assets.xcassets in Resources */,
 				291F61432785AC6800756679 /* Assets.xcassets in Resources */,
 			);
@@ -263,6 +283,7 @@
 				291F616A2785F25A00756679 /* ProgressBar.swift in Sources */,
 				291884FF2786CEAE009CF816 /* NeumorphicInterEffect.swift in Sources */,
 				2974268A2787320900D42474 /* AddTodoViewModel.swift in Sources */,
+				29CCF9DC27883D4E00AB3F6F /* LottieView.swift in Sources */,
 				2974267B27872E5100D42474 /* MinimaList.xcdatamodeld in Sources */,
 				291884FD2786C383009CF816 /* RoundedCorner.swift in Sources */,
 				291F61562785AD7200756679 /* CustomTabView.swift in Sources */,
@@ -278,6 +299,7 @@
 				291F61642785D9CF00756679 /* NeumorphicEffect.swift in Sources */,
 				2974268127872F5A00D42474 /* ListModel+Extension.swift in Sources */,
 				29B755652787484000681201 /* AddToDo.swift in Sources */,
+				29CCF9DF2788406E00AB3F6F /* ModalView.swift in Sources */,
 				291F615F2785CF7100756679 /* Setting.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,9 +434,11 @@
 				DEVELOPMENT_TEAM = 46J936NABV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MinimaList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -441,9 +465,11 @@
 				DEVELOPMENT_TEAM = 46J936NABV;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MinimaList/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -481,6 +507,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		29CCF9D827883CE900AB3F6F /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		29CCF9D927883CE900AB3F6F /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 29CCF9D827883CE900AB3F6F /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		2974267927872E5100D42474 /* MinimaList.xcdatamodeld */ = {

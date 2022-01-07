@@ -29,11 +29,11 @@ struct ListView2: View {
             }
             .padding()
             
-            Text("60%")
+            Text(list.progressDisplayValue)
                 .padding(.top, 10)
                 .padding(.horizontal)
             
-            ProgressBar(value: .constant(0.6))
+            ProgressBar(value: .constant(list.progressValue))
                 .frame(height: 20)
 //                .padding(.top)
             
