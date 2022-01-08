@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct CustomTabItem: View {
+    
     let width, height: CGFloat
     let systemIconName: String
+    
+    @ObservedObject var themeColor: ThemesColors
     
     @ObservedObject var tabBarRouter: CustomTabRouter
     let assignedPage: Page
@@ -24,7 +27,7 @@ struct CustomTabItem: View {
             
             Spacer()
         }
-        .foregroundColor(tabBarRouter.currentPage == assignedPage ? ThemesColors.shared.color : Color("BlackList"))
+        .foregroundColor(tabBarRouter.currentPage == assignedPage ? themeColor.color : Color.gray)
         .onTapGesture {
             tabBarRouter.currentPage = assignedPage
         }
@@ -35,12 +38,14 @@ struct CustomPlusTabItem: View {
     let width, height: CGFloat
     let systemIconName: String
     
+    @ObservedObject var themeColor: ThemesColors
+    
     var action: () -> Void
     
     var body: some View {
         ZStack {
             Rectangle()
-                .foregroundColor(ThemesColors.shared.color)
+                .foregroundColor(themeColor.color)
                 .frame(width: width, height: height)
                 .cornerRadius(15)
 //            Circle()

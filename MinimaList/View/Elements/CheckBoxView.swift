@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CheckboxView: View {
     @State var isChecked: Bool
+    @ObservedObject var themeColor: ThemesColors
+    
     var ontap: (_ isChecked: Bool) -> Void
     
     let todo: TodoViewModel
@@ -23,8 +25,14 @@ struct CheckboxView: View {
         HStack {
             Button(action: toggle) {
                 HStack {
+//                    if isChecked {
+//                        LottieView(filename: "Test").frame(width: 25, height: 25)
+//                    } else {
+//                        Image(systemName: "minus").frame(width: 25, height: 25)
+//                            .foregroundColor(themeColor.color)
+//                    }
                     Image(systemName: isChecked ? "checkmark" : "minus").frame(width: 25, height: 25)
-                        .foregroundColor(Color("RedList"))
+                        .foregroundColor(themeColor.color)
                 }
             }
             .frame(width: 30, height: 30)
@@ -32,7 +40,7 @@ struct CheckboxView: View {
             .cornerRadius(15)
             .overlay(
                 RoundedRectangle(cornerRadius: 15)
-                    .stroke(Color("RedList"), lineWidth: 2)
+                    .stroke(themeColor.color, lineWidth: 2)
             )
             
             
@@ -45,7 +53,7 @@ struct CheckboxView: View {
         .frame(width: UIScreen.main.bounds.width / 1.1, height: 60)
 //        .foregroundColor(Color("BlackList"))
         .foregroundColor(isChecked ? Color("MercuryList") : Color("BlackList"))
-        .background(isChecked ? Color("RedList") : Color("MercuryList"))
+        .background(isChecked ? themeColor.color : Color("MercuryList"))
         .cornerRadius(15)
         .neumorphicEffect(fillColor: Color("MercuryList"), cornerRdius: 30)
         .listRowBackground(Color.clear)

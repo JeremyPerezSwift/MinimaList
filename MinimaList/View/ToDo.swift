@@ -10,6 +10,8 @@ import SwiftUI
 struct ToDo: View {
     @Environment(\.presentationMode) var presentationMode
     @StateObject private var todoListVM = TodoListViewModel()
+    @ObservedObject var themeColor: ThemesColors
+    
     let list: ListViewModel
     
     @State var isShowPopUp = false
@@ -33,7 +35,7 @@ struct ToDo: View {
                         }) {
                             Image(systemName: "arrow.left")
                                 .font(.title2)
-                                .foregroundColor(Color("RedList"))
+                                .foregroundColor(themeColor.color)
                         }
                         .frame(width: 40, height: 40)
                         
@@ -56,7 +58,7 @@ struct ToDo: View {
                                 .foregroundColor(Color("MercuryList"))
                         }
                         .frame(width: 40, height: 40)
-                        .neumorphicEffect(fillColor: Color("RedList"), cornerRdius: 10)
+                        .neumorphicEffect(fillColor: themeColor.color, cornerRdius: 10)
                     }
                     .padding(.horizontal)
                     .padding(.top)
@@ -93,7 +95,7 @@ struct ToDo: View {
                             } label: {
                                 Image(systemName: "slider.horizontal.3")
                                     .font(.body)
-                                    .foregroundColor(Color("RedList"))
+                                    .foregroundColor(themeColor.color)
                             }
                             .frame(width: 40, height: 40)
                             .neumorphicEffect(fillColor: Color("MercuryList"), cornerRdius: 10)
@@ -102,7 +104,7 @@ struct ToDo: View {
                         .padding(.horizontal)
                         
                         HStack {
-                            ProgressBar2(value: $todoListVM.progressValue)
+                            ProgressBar2(value: $todoListVM.progressValue, themeColor: themeColor)
                                 .frame(height: 20)
         //                        .neumorphicEffect(fillColor: Color("MercuryList"), cornerRdius: 10)
                         }
@@ -117,7 +119,7 @@ struct ToDo: View {
                         ForEach(todoListVM.todos, id: \.id) { todo in
                             
                             ZStack(alignment: .leading) {
-                                CheckboxView(isChecked: todo.completed, ontap: { isChecked in
+                                CheckboxView(isChecked: todo.completed, themeColor: themeColor, ontap: { isChecked in
                                     self.todoListVM.toggleComplete(todo: todo, isChecked: isChecked)
                                     self.todoListVM.getTodosByListWithCheck(vm: list)
                                     isCheckPopup = true
@@ -162,7 +164,7 @@ struct ToDo: View {
         .sheet(isPresented: $isShowPopUp) {
             todoListVM.getTodosByList(vm: list)
         } content: {
-            AddToDo(list: list)
+            AddToDo(themeColor: themeColor, list: list)
         }
     }
 }

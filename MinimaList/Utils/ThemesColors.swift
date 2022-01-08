@@ -8,11 +8,34 @@
 import Foundation
 import SwiftUI
 
-class ThemesColors {
+class ThemesColors: ObservableObject {
     
     static let shared = ThemesColors()
     
-    var color = Color("RedList")
-    var colorAlpha = Color("SilverList")
+    @Published var color = Color("BlackList")
+    @Published var colorAlpha = Color("BlackListAlpha")
+
+    // Color("RedList") Color("SilverList")
+    // Color("SeaList") Color("SeaListAlpha")
+    
+    init() {
+        fetchTheme()
+    }
+    
+    func updateTheme(color: String, colorAlpha: String) {
+        let defaults = UserDefaults.standard
+        defaults.set(color, forKey: "ThemeColor")
+        defaults.set(colorAlpha, forKey: "ThemeColorAlpha")
+    }
+    
+    func fetchTheme() {
+        let defaults = UserDefaults.standard
+        
+        let colorString = defaults.object(forKey: "ThemeColor") as? String ?? "BlackList"
+        let colorStringAlpha = defaults.object(forKey: "ThemeColorAlpha") as? String ?? "BlackListAlpha"
+        
+        color = Color(colorString)
+        colorAlpha = Color(colorStringAlpha)
+    }
     
 }

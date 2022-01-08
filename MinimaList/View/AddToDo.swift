@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AddToDo: View {
     @Environment(\.dismiss) var dismiss
-    
+    @ObservedObject var themeColor: ThemesColors
     @StateObject private var addTodoViewModel = AddTodoViewModel()
     let list: ListViewModel
     
@@ -27,7 +27,7 @@ struct AddToDo: View {
                     }) {
                         Image(systemName: "xmark.circle")
                             .font(.title2)
-                            .foregroundColor(Color("RedList"))
+                            .foregroundColor(themeColor.color)
                     }
                     .frame(width: 40, height: 40)
                     .padding()
@@ -55,7 +55,7 @@ struct AddToDo: View {
                         Text("Confirm")
                             .frame(width: UIScreen.main.bounds.width / 1.1, height: 50)
                             .foregroundColor(.white)
-                            .neumorphicEffect(fillColor: Color("RedList"), cornerRdius: 10)
+                            .neumorphicEffect(fillColor: themeColor.color, cornerRdius: 10)
 //                            .padding()
                     }
                     

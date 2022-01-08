@@ -12,6 +12,8 @@ struct AddList: View {
     @StateObject private var addListViewModel = AddListViewModel()
     @StateObject private var listListViewModel = ListListViewModel()
     
+    @ObservedObject var themeColor: ThemesColors
+    
     var body: some View {
         
         ZStack {
@@ -24,7 +26,7 @@ struct AddList: View {
                     }) {
                         Image(systemName: "xmark.circle")
                             .font(.title2)
-                            .foregroundColor(Color("RedList"))
+                            .foregroundColor(themeColor.color)
                     }
                     .frame(width: 40, height: 40)
                     .padding()
@@ -50,7 +52,7 @@ struct AddList: View {
                         Text("Confirm")
                             .frame(width: UIScreen.main.bounds.width / 1.1, height: 50)
                             .foregroundColor(.white)
-                            .neumorphicEffect(fillColor: Color("RedList"), cornerRdius: 10)
+                            .neumorphicEffect(fillColor: themeColor.color, cornerRdius: 10)
 //                            .padding()
                     }
                     
@@ -60,7 +62,7 @@ struct AddList: View {
                 List {
                     ForEach(listListViewModel.lists, id: \.id) { list in
                         ZStack(alignment: .leading) {
-                            ListArchiveView(list: list, ontap: { isChecked in
+                            ListArchiveView(list: list, themeColor: themeColor, ontap: { isChecked in
                                 print("DEBUG: List \(list.title)")
                                 listListViewModel.updateCompletedList(vm: list)
                                 dismiss()
@@ -93,6 +95,6 @@ struct AddList: View {
 
 struct AddList_Previews: PreviewProvider {
     static var previews: some View {
-        AddList()
+        AddList(themeColor: ThemesColors())
     }
 }

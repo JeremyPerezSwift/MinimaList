@@ -9,16 +9,17 @@ import SwiftUI
 
 struct ProgressBar2: View {
     @Binding var value: Float
+    @ObservedObject var themeColor: ThemesColors
     
     var body: some View {
         GeometryReader { geo in
             ZStack(alignment: .leading) {
                 Rectangle().frame(width: geo.size.width, height: geo.size.height)
                     .opacity(1)
-                    .foregroundColor(ThemesColors.shared.colorAlpha)
+                    .foregroundColor(themeColor.colorAlpha)
                 
                 Rectangle().frame(width: self.getProgressWidth(geo: geo), height: geo.size.height)
-                    .foregroundColor(ThemesColors.shared.color)
+                    .foregroundColor(themeColor.color)
                     .animation(.linear)
             }
             .cornerRadius(10)
@@ -33,6 +34,6 @@ struct ProgressBar2: View {
 
 struct ProgressBar2_Previews: PreviewProvider {
     static var previews: some View {
-        ProgressBar2(value: .constant(0.5))
+        ProgressBar2(value: .constant(0.5), themeColor: ThemesColors())
     }
 }

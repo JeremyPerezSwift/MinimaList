@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ListView2: View {
     let list: ListViewModel
+    @ObservedObject var themeColor: ThemesColors
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -25,7 +26,7 @@ struct ListView2: View {
                 
                 Image(systemName: "arrow.right")
                     .font(.title3)
-                    .foregroundColor(ThemesColors.shared.color)
+                    .foregroundColor(themeColor.color)
             }
             .padding()
             
@@ -33,7 +34,7 @@ struct ListView2: View {
                 .padding(.top, 10)
                 .padding(.horizontal)
             
-            ProgressBar(value: .constant(list.progressValue))
+            ProgressBar(value: .constant(list.progressValue), themeColor: themeColor)
                 .frame(height: 20)
 //                .padding(.top)
             

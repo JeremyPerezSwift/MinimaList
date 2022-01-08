@@ -9,16 +9,17 @@ import SwiftUI
 
 struct CustomTabView: View {
     @StateObject var tabBarRouter = CustomTabRouter()
-    @State var isShowPopUp = false
+    @StateObject var themeColor = ThemesColors()
     
+    @State var isShowPopUp = false
     @State var refreshList = false
     
     @ViewBuilder var contentView: some View {
         switch tabBarRouter.currentPage {
         case .home:
-            Home(refreshList: $refreshList)
+            Home(themeColor: themeColor, refreshList: $refreshList)
         case .setting:
-            Setting()
+            Setting(themeColor: themeColor)
         case .plus:
             EmptyView()
         }
@@ -37,15 +38,15 @@ struct CustomTabView: View {
                 Divider()
                 
                 HStack {
-                    CustomTabItem(width: geometry.size.width / 20, height: 0, systemIconName: "rectangle.grid.1x2.fill", tabBarRouter: tabBarRouter, assignedPage: .home)
+                    CustomTabItem(width: geometry.size.width / 20, height: 0, systemIconName: "rectangle.grid.1x2.fill", themeColor: themeColor, tabBarRouter: tabBarRouter, assignedPage: .home)
                         .padding(.top)
                     
-                    CustomPlusTabItem(width: geometry.size.width / 8, height: geometry.size.width / 8, systemIconName: "plus", action: showPopUp)
+                    CustomPlusTabItem(width: geometry.size.width / 8, height: geometry.size.width / 8, systemIconName: "plus", themeColor: themeColor, action: showPopUp)
                         .neumorphicEffect(fillColor: ThemesColors.shared.color, cornerRdius: 15)
                         .padding(.horizontal, geometry.size.width / 6)
                         .offset(y: -((geometry.size.height / 9) / 2) - 8)
                     
-                    CustomTabItem(width: geometry.size.width / 20, height: 0, systemIconName: "gearshape.fill", tabBarRouter: tabBarRouter, assignedPage: .setting)
+                    CustomTabItem(width: geometry.size.width / 20, height: 0, systemIconName: "gearshape.fill", themeColor: themeColor, tabBarRouter: tabBarRouter, assignedPage: .setting)
                         .padding(.top)
                 }
                 .frame(width: geometry.size.width, height: geometry.size.height / 9)
@@ -54,7 +55,7 @@ struct CustomTabView: View {
             .sheet(isPresented: $isShowPopUp) {
                 refreshList.toggle()
             } content: {
-                AddList()
+                AddList(themeColor: themeColor)
             }
 
         }

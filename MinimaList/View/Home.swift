@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Home: View {
     @StateObject private var listListViewModel = ListListViewModel()
+    @ObservedObject var themeColor: ThemesColors
     
     @Binding var refreshList: Bool
     
@@ -71,20 +72,11 @@ struct Home: View {
                     } label: {
                         Image(systemName: "slider.horizontal.3")
                             .font(.body)
-                            .foregroundColor(ThemesColors.shared.color)
+                            .foregroundColor(themeColor.color)
+                        //ThemesColors.shared.color
                     }
                     .frame(width: 40, height: 40)
                     .neumorphicEffect(fillColor: Color("MercuryList"), cornerRdius: 10)
-                    
-//                    Button(action: {
-//                        listListViewModel.filterList(lists: listListViewModel.lists)
-//                    }) {
-//                        Image(systemName: "slider.horizontal.3")
-//                            .font(.body)
-//                            .foregroundColor(Color("RedList"))
-//                    }
-//                    .frame(width: 40, height: 40)
-//                    .neumorphicEffect(fillColor: Color("MercuryList"), cornerRdius: 10)
                 }
                 .foregroundColor(.black)
                 .padding(.top, 0)
@@ -95,13 +87,13 @@ struct Home: View {
                 List {
                     ForEach(listListViewModel.lists, id: \.id) { list in
                         ZStack(alignment: .leading) {
-                            ListView2(list: list)
+                            ListView2(list: list, themeColor: themeColor)
                                 .padding(.vertical, 10)
                             
                             NavigationLink(
-                                destination: ToDo(list: list),
+                                destination: ToDo(themeColor: themeColor, list: list),
                                 label: {
-                                    ListView2(list: list)
+                                    ListView2(list: list, themeColor: themeColor)
                                         .padding(.vertical, 10)
                                 })
                                 .transition(.opacity)

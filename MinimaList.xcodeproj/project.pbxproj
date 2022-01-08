@@ -33,6 +33,7 @@
 		297426862787309800D42474 /* AddListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297426852787309800D42474 /* AddListViewModel.swift */; };
 		29742688278730DC00D42474 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29742687278730DC00D42474 /* ListViewModel.swift */; };
 		2974268A2787320900D42474 /* AddTodoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 297426892787320900D42474 /* AddTodoViewModel.swift */; };
+		29A3DF5427896EEE00BFE16A /* ThemesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29A3DF5327896EEE00BFE16A /* ThemesView.swift */; };
 		29B755632787356900681201 /* TodoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B755622787356900681201 /* TodoListViewModel.swift */; };
 		29B755652787484000681201 /* AddToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B755642787484000681201 /* AddToDo.swift */; };
 		29CCF9DA27883CE900AB3F6F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 29CCF9D927883CE900AB3F6F /* Lottie */; };
@@ -74,6 +75,7 @@
 		297426852787309800D42474 /* AddListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddListViewModel.swift; sourceTree = "<group>"; };
 		29742687278730DC00D42474 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		297426892787320900D42474 /* AddTodoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTodoViewModel.swift; sourceTree = "<group>"; };
+		29A3DF5327896EEE00BFE16A /* ThemesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesView.swift; sourceTree = "<group>"; };
 		29B755622787356900681201 /* TodoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewModel.swift; sourceTree = "<group>"; };
 		29B755642787484000681201 /* AddToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDo.swift; sourceTree = "<group>"; };
 		29CCF9DB27883D4E00AB3F6F /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
@@ -172,9 +174,10 @@
 				291884F92786C295009CF816 /* Elements */,
 				291F61512785AC9100756679 /* Home.swift */,
 				291F61572785AE0C00756679 /* ToDo.swift */,
-				291F615E2785CF7100756679 /* Setting.swift */,
 				291F61602785D40A00756679 /* AddList.swift */,
 				29B755642787484000681201 /* AddToDo.swift */,
+				291F615E2785CF7100756679 /* Setting.swift */,
+				29A3DF5327896EEE00BFE16A /* ThemesView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				2974268A2787320900D42474 /* AddTodoViewModel.swift in Sources */,
 				29CCF9DC27883D4E00AB3F6F /* LottieView.swift in Sources */,
 				2974267B27872E5100D42474 /* MinimaList.xcdatamodeld in Sources */,
+				29A3DF5427896EEE00BFE16A /* ThemesView.swift in Sources */,
 				291884FD2786C383009CF816 /* RoundedCorner.swift in Sources */,
 				291F61562785AD7200756679 /* CustomTabView.swift in Sources */,
 				291F61582785AE0C00756679 /* ToDo.swift in Sources */,
