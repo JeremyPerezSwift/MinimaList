@@ -20,6 +20,9 @@ struct ModalView: View {
         }
         .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 1.3)
         .background(Color("Alpha"))
+        .onAppear {
+            HapticsManager.shared.vibrate(for: .success)
+        }
     }
 }
 

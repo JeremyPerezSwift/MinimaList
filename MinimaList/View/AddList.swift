@@ -19,6 +19,13 @@ struct AddList: View {
         ZStack {
             VStack(spacing: 0) {
                 HStack {
+                    Text("New list")
+                        .font(.title)
+                        .bold()
+                        .fixedSize(horizontal: false, vertical: true)
+                        .lineLimit(2)
+                        .padding(.horizontal)
+                    
                     Spacer()
                     
                     Button(action: {
@@ -58,6 +65,25 @@ struct AddList: View {
                     
                 }
                 .padding(.vertical)
+                
+                HStack {
+                    Image(systemName: "clock.arrow.circlepath")
+                        .font(.title2)
+                        .foregroundColor(themeColor.color)
+                        .frame(width: 40, height: 40)
+                        .neumorphicEffect(fillColor: Color("MercuryList"), cornerRdius: 10)
+                    
+                    Text("Old list :")
+                        .font(.title3)
+                        .bold()
+                        .fixedSize(horizontal: false, vertical: true)
+                        .lineLimit(2)
+                        .padding(.horizontal, 10)
+                    
+                    Spacer()
+                }
+                .padding(.top)
+                .padding(.horizontal)
                 
                 List {
                     ForEach(listListViewModel.lists, id: \.id) { list in

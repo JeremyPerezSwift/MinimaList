@@ -75,19 +75,22 @@ struct ToDo: View {
                             Menu {
                                 
                                 Button {
-                                    
+                                    todoListVM.filterTodoByDate(todos: todoListVM.todos)
+                                    todoListVM.filterCheck = .date
                                 } label: {
                                     Text("By date")
                                 }
                                 
                                 Button {
-                                    
+                                    todoListVM.filterTodoByTitle(todos: todoListVM.todos)
+                                    todoListVM.filterCheck = .title
                                 } label: {
                                     Text("By title")
                                 }
                                 
                                 Button {
-                                    
+                                    todoListVM.filterTodoByCompleted(todos: todoListVM.todos)
+                                    todoListVM.filterCheck = .completed
                                 } label: {
                                     Text("By completed")
                                 }
@@ -123,8 +126,20 @@ struct ToDo: View {
                                     self.todoListVM.toggleComplete(todo: todo, isChecked: isChecked)
                                     self.todoListVM.getTodosByListWithCheck(vm: list)
                                     isCheckPopup = true
+                                    
+                                    if isChecked {
+                                        HapticsManager.shared.vibrateImpact(for: 1, impact: .light)
+                                    }
                                 }, todo: todo)
                                     .padding(.vertical, 10)
+                                    .swipeActions(edge: .trailing, allowsFullSwipe: false) {
+                                        Button {
+    //                                        deleteList
+                                        } label: {
+                                            Text("Test")
+                                        }
+
+                                    }
                                 
                             }
                             .listStyle(PlainListStyle())

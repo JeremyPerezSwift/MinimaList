@@ -40,6 +40,7 @@
 		29CCF9DC27883D4E00AB3F6F /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CCF9DB27883D4E00AB3F6F /* LottieView.swift */; };
 		29CCF9DF2788406E00AB3F6F /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29CCF9DE2788406E00AB3F6F /* ModalView.swift */; };
 		29CCF9E32788422700AB3F6F /* Test.json in Resources */ = {isa = PBXBuildFile; fileRef = 29CCF9E22788422700AB3F6F /* Test.json */; };
+		29DAD2D82789D75F0046ABDA /* HapticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29DAD2D72789D75F0046ABDA /* HapticsManager.swift */; };
 		29E4943327887A3C00ACFDAE /* ListArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E4943227887A3C00ACFDAE /* ListArchiveView.swift */; };
 		29E49436278898A900ACFDAE /* ThemesColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E49435278898A900ACFDAE /* ThemesColors.swift */; };
 		29E494382788A38000ACFDAE /* bg.json in Resources */ = {isa = PBXBuildFile; fileRef = 29E494372788A38000ACFDAE /* bg.json */; };
@@ -82,6 +83,7 @@
 		29CCF9DE2788406E00AB3F6F /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 		29CCF9E22788422700AB3F6F /* Test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Test.json; sourceTree = "<group>"; };
 		29CCF9E427884F1F00AB3F6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		29DAD2D72789D75F0046ABDA /* HapticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsManager.swift; sourceTree = "<group>"; };
 		29E4943227887A3C00ACFDAE /* ListArchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListArchiveView.swift; sourceTree = "<group>"; };
 		29E49435278898A900ACFDAE /* ThemesColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesColors.swift; sourceTree = "<group>"; };
 		29E494372788A38000ACFDAE /* bg.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bg.json; sourceTree = "<group>"; };
@@ -136,8 +138,8 @@
 		291F613D2785AC6800756679 /* MinimaList */ = {
 			isa = PBXGroup;
 			children = (
-				29E494342788988A00ACFDAE /* Utils */,
 				29CCF9E427884F1F00AB3F6F /* Info.plist */,
+				29E494342788988A00ACFDAE /* Utils */,
 				2974267127872B3400D42474 /* Model */,
 				291F61622785D40D00756679 /* View */,
 				291F615B2785CE0B00756679 /* CustomTabBar */,
@@ -209,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				29E49435278898A900ACFDAE /* ThemesColors.swift */,
+				29DAD2D72789D75F0046ABDA /* HapticsManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				291F61612785D40A00756679 /* AddList.swift in Sources */,
 				291F615A2785C98200756679 /* CustomTabItem.swift in Sources */,
 				291F615D2785CE3000756679 /* CustomTabRouter.swift in Sources */,
+				29DAD2D82789D75F0046ABDA /* HapticsManager.swift in Sources */,
 				29E4943327887A3C00ACFDAE /* ListArchiveView.swift in Sources */,
 				29E4943A2788A40E00ACFDAE /* ModalBgView.swift in Sources */,
 				29E4943D2788A61400ACFDAE /* LottieView2.swift in Sources */,

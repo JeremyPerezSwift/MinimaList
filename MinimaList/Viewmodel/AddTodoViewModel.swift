@@ -17,6 +17,7 @@ class AddTodoViewModel: ObservableObject {
             let review = TodoModel(context: TodoModel.viewContext)
             review.title = title
             review.listmodel = list
+            review.publishedAt = Date()
             
             review.save()
         }

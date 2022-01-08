@@ -9,11 +9,12 @@
     </entity>
     <entity name="TodoModel" representedClassName="TodoModel" syncable="YES" codeGenerationType="class">
         <attribute name="completed" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="publishedAt" optional="YES" attributeType="Date" defaultDateTimeInterval="663338100" usesScalarValueType="NO"/>
         <attribute name="title" attributeType="String"/>
         <relationship name="listmodel" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ListModel" inverseName="todos" inverseEntity="ListModel"/>
     </entity>
     <elements>
         <element name="ListModel" positionX="-45" positionY="0" width="128" height="104"/>
-        <element name="TodoModel" positionX="-18" positionY="36" width="128" height="74"/>
+        <element name="TodoModel" positionX="-18" positionY="36" width="128" height="89"/>
     </elements>
 </model>

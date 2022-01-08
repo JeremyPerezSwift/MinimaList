@@ -28,6 +28,11 @@ struct Home: View {
         }
     }
     
+    private func deleteList2(list: ListViewModel) {
+        listListViewModel.deleteMovie(list_P: list)
+        listListViewModel.getAllMovies(typeCompleted: false)
+    }
+    
     var body: some View {
         ZStack {
             VStack {
@@ -87,6 +92,8 @@ struct Home: View {
                 List {
                     ForEach(listListViewModel.lists, id: \.id) { list in
                         ZStack(alignment: .leading) {
+                            
+                            
                             ListView2(list: list, themeColor: themeColor)
                                 .padding(.vertical, 10)
                             
@@ -98,8 +105,8 @@ struct Home: View {
                                 })
                                 .transition(.opacity)
                                 .opacity(0)
+                            
                         }
-                        
                         .listStyle(PlainListStyle())
                         .background(Color("MercuryList"))
                         .listRowBackground(Color.clear)
@@ -108,14 +115,30 @@ struct Home: View {
                             UITableView.appearance().separatorStyle = .none
                             UITableView.appearance().separatorColor = .clear
                         })
+                        .swipeActions(edge: .trailing, allowsFullSwipe: false) {
+                            
+                            Button {
+                                deleteList2(list: list)
+                            } label: {
+                                Image("delete")
+                                    .font(.body)
+                                    .foregroundColor(themeColor.color)
+                                    .frame(width: 50, height: 50)
+                            }
+                            .tint(.clear)
+                            
+                        }
                     }
-                    .onDelete(perform: deleteList)
+                    
+//                    .onDelete(perform: deleteList)
+                    
 
                 }
                 .listStyle(PlainListStyle())
                 .onAppear {
                     listListViewModel.getAllMovies(typeCompleted: false)
                 }
+                
                 
             }
             

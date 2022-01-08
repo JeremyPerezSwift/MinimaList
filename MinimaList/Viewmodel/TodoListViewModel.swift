@@ -8,10 +8,18 @@
 import Foundation
 import CoreData
 
+enum FilterCheck {
+    case date
+    case title
+    case completed
+}
+
 class TodoListViewModel: ObservableObject {
     
     @Published var todos = [TodoViewModel]()
     @Published var progressValue: Float = 0.0
+    
+    var filterCheck: FilterCheck = .date
     
     var progressDisplayValue: String {
         return progressValue > 0.0 ? "\(Int(progressValue * 100)) %" : "0%"
@@ -20,6 +28,7 @@ class TodoListViewModel: ObservableObject {
     func getTodosByList(vm: ListViewModel) {
         DispatchQueue.main.async {
             self.todos = TodoModel.getTodoByListId(listId: vm.id).map(TodoViewModel.init)
+            self.filterTodoByDate(todos: self.todos)
             
             var completed = 0
             for todo in self.todos {
@@ -40,6 +49,15 @@ class TodoListViewModel: ObservableObject {
     func getTodosByListWithCheck(vm: ListViewModel) {
         DispatchQueue.main.async {
             self.todos = TodoModel.getTodoByListId(listId: vm.id).map(TodoViewModel.init)
+            
+            switch self.filterCheck {
+            case .date:
+                self.filterTodoByDate(todos: self.todos)
+            case .title:
+                self.filterTodoByTitle(todos: self.todos)
+            case .completed:
+                self.filterTodoByCompleted(todos: self.todos)
+            }
             
             var completed = 0
             for todo in self.todos {
@@ -107,6 +125,21 @@ class TodoListViewModel: ObservableObject {
         }
     }
     
+    func filterTodoByDate(todos: [TodoViewModel]) {
+        let todosFilter = todos.sorted { $0.publishedAt > $1.publishedAt }
+        self.todos = todosFilter
+    }
+    
+    func filterTodoByTitle(todos: [TodoViewModel]) {
+        let todosFilter = todos.sorted { $0.title > $1.title }
+        self.todos = todosFilter
+    }
+    
+    func filterTodoByCompleted(todos: [TodoViewModel]) {
+        let todosFilter = todos.sorted { !$0.completed && $1.completed }
+        self.todos = todosFilter
+    }
+    
 }
 
 struct TodoViewModel {
@@ -123,6 +156,10 @@ struct TodoViewModel {
     
     var completed: Bool {
         return todo.completed
+    }
+    
+    var publishedAt: Date {
+        return todo.publishedAt ?? Date()
     }
     
 }

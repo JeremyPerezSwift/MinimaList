@@ -20,6 +20,13 @@ struct AddToDo: View {
         ZStack {
             VStack(spacing: 0) {
                 HStack {
+                    Text("New todo")
+                        .font(.title)
+                        .bold()
+                        .fixedSize(horizontal: false, vertical: true)
+                        .lineLimit(2)
+                        .padding(.horizontal)
+                    
                     Spacer()
                     
                     Button(action: {

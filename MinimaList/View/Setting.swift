@@ -45,7 +45,7 @@ struct Setting: View {
                             
                             Spacer()
                             
-                            Text("Service premium")
+                            Text("Premium service")
                             
                             Spacer()
                             Spacer()
@@ -68,7 +68,7 @@ struct Setting: View {
                                     .foregroundColor(.black)
                                     .frame(width: 45, height: 45)
                                 
-                                Text("Couleur du thèmes")
+                                Text("Theme colors")
                                     .font(.system(size: 15))
                                 
                                 Spacer()
@@ -97,7 +97,7 @@ struct Setting: View {
                                     .foregroundColor(.black)
                                     .frame(width: 45, height: 45)
                                 
-                                Text("Icône de l'application")
+                                Text("App icon")
                                     .font(.system(size: 15))
                                 
                                 Spacer()
@@ -131,7 +131,7 @@ struct Setting: View {
                                     .foregroundColor(.black)
                                     .frame(width: 45, height: 45)
                                 
-                                Text("Partager le lien de MinimaList")
+                                Text("Share MinimaList's link")
                                     .font(.system(size: 15))
                                 
                                 Spacer()
@@ -160,7 +160,7 @@ struct Setting: View {
                                     .foregroundColor(.black)
                                     .frame(width: 45, height: 45)
                                 
-                                Text("Rapport des bogues")
+                                Text("Update report")
                                     .font(.system(size: 15))
                                 
                                 Spacer()
@@ -189,7 +189,7 @@ struct Setting: View {
                                     .foregroundColor(.black)
                                     .frame(width: 45, height: 45)
                                 
-                                Text("Revue su l'AppStore")
+                                Text("Review on the AppStore")
                                     .font(.system(size: 15))
                                 
                                 Spacer()
