@@ -11,6 +11,7 @@ struct Setting: View {
     @ObservedObject var themeColor: ThemesColors
     
     @State var isShowPopUp = false
+    @State var isShowPopUpThemeIcons = false
     
     var body: some View {
         ZStack {
@@ -90,7 +91,7 @@ struct Setting: View {
                         
                         HStack {
                             Button(action: {
-                                
+                                isShowPopUpThemeIcons.toggle()
                             }) {
                                 Image(systemName: "square")
                                     .font(.body)
@@ -211,6 +212,11 @@ struct Setting: View {
 //                    .padding(.vertical)
                     .padding()
                     .padding(.top, 0)
+                    
+                    Text("Version 0.8.0")
+                        .font(.system(size: 13))
+                        .padding()
+                        .foregroundColor(Color.gray)
                 }
                 
                 
@@ -225,6 +231,13 @@ struct Setting: View {
         } content: {
             ThemesView(themeColor: themeColor)
         }
+        .sheet(isPresented: $isShowPopUpThemeIcons) {
+            
+        } content: {
+//            ThemesIconesView().environmentObject(IconThemeViewModel())
+            ThemesIconesView2(themeColor: themeColor)
+        }
+
     
     }
 }

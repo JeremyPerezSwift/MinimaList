@@ -17,12 +17,9 @@ struct ToDo: View {
     @State var isShowPopUp = false
     @State var isCheckPopup = false
     
-    private func deleteTodo(at indexSet: IndexSet) {
-        indexSet.forEach { index in
-           let todo = todoListVM.todos[index]
-            todoListVM.deleteTodo(todo_P: todo)
-            todoListVM.getTodosByList(vm: list)
-        }
+    private func deleteTodo2(todoViewModel: TodoViewModel) {
+        todoListVM.deleteTodo(todo_P: todoViewModel)
+        todoListVM.getTodosByList(vm: list)
     }
     
     var body: some View {
@@ -132,14 +129,6 @@ struct ToDo: View {
                                     }
                                 }, todo: todo)
                                     .padding(.vertical, 10)
-                                    .swipeActions(edge: .trailing, allowsFullSwipe: false) {
-                                        Button {
-    //                                        deleteList
-                                        } label: {
-                                            Text("Test")
-                                        }
-
-                                    }
                                 
                             }
                             .listStyle(PlainListStyle())
@@ -150,9 +139,19 @@ struct ToDo: View {
                                 UITableView.appearance().separatorStyle = .none
                                 UITableView.appearance().separatorColor = .clear
                             })
+                            .swipeActions(edge: .trailing, allowsFullSwipe: false) {
+                                Button {
+                                    deleteTodo2(todoViewModel: todo)
+                                } label: {
+                                    Image("delete")
+                                        .font(.body)
+                                }
+                                .tint(.clear)
+                                
+                            }
                             
                         }
-                        .onDelete(perform: deleteTodo)
+//                        .onDelete(perform: deleteTodo)
 
                     }
                     .listStyle(PlainListStyle())

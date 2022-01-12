@@ -20,14 +20,6 @@ struct Home: View {
 //        UITableViewCell.appearance().selectionStyle = .none
 //    }
     
-    private func deleteList(at indexSet: IndexSet) {
-        indexSet.forEach { index in
-            let list = listListViewModel.lists[index]
-            listListViewModel.deleteMovie(list_P: list)
-            listListViewModel.getAllMovies(typeCompleted: false)
-        }
-    }
-    
     private func deleteList2(list: ListViewModel) {
         listListViewModel.deleteMovie(list_P: list)
         listListViewModel.getAllMovies(typeCompleted: false)
@@ -37,9 +29,14 @@ struct Home: View {
         ZStack {
             VStack {
                 HStack {
-                    Text("MinimaList")
+                    Image("logo")
+                        .resizable()
+                        .frame(width: 50, height: 50)
+                    
+                    Text("Enum To-Do")
                         .font(.largeTitle)
                         .fontWeight(.bold)
+                        .foregroundColor(Color("BlackList"))
                     
                     Spacer(minLength: 0)
                 }
@@ -122,12 +119,11 @@ struct Home: View {
                             } label: {
                                 Image("delete")
                                     .font(.body)
-                                    .foregroundColor(themeColor.color)
-                                    .frame(width: 50, height: 50)
                             }
                             .tint(.clear)
                             
                         }
+                        
                     }
                     
 //                    .onDelete(perform: deleteList)
