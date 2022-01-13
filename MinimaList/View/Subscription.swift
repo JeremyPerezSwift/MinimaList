@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import StoreKit
 
 struct Subscription: View {
+    @StateObject var storeManager = InAppExtension()
+    
     var body: some View {
         ZStack {
             VStack {
@@ -105,6 +108,9 @@ struct Subscription: View {
             }
             .padding()
             .background(Color("MercuryList"))
+        }
+        .onAppear {
+            storeManager.getList()
         }
     }
 }

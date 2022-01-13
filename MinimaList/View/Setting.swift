@@ -10,6 +10,7 @@ import SwiftUI
 struct Setting: View {
     @ObservedObject var themeColor: ThemesColors
     
+    @State var isShowPremum = false
     @State var isShowPopUp = false
     @State var isShowPopUpThemeIcons = false
     
@@ -36,7 +37,7 @@ struct Setting: View {
                     
                     HStack {
                         Button(action: {
-                            
+                            isShowPremum = true
                         }) {
                             Image(systemName: "crown")
                                 .font(.body)
@@ -234,8 +235,12 @@ struct Setting: View {
         .sheet(isPresented: $isShowPopUpThemeIcons) {
             
         } content: {
-//            ThemesIconesView().environmentObject(IconThemeViewModel())
             ThemesIconesView2(themeColor: themeColor)
+        }
+        .sheet(isPresented: $isShowPremum) {
+            
+        } content: {
+            Subscription()
         }
 
     
