@@ -65,12 +65,14 @@ struct ThemesIconesView2: View {
                     Button(action: {
                         appIconServices.changeAppIcon(to: .black)
                     }) {
-                        Rectangle()
-                            .cornerRadius(10)
+                        Image("blackwithoutbg")
+                            .resizable()
                             .frame(width: 50, height: 50)
-                            .foregroundColor(Color("BlackList"))
-                            .neumorphicEffect(fillColor: Color("BlackList"), cornerRdius: 10)
                     }
+                    .cornerRadius(10)
+                    .frame(width: 60, height: 60)
+                    .foregroundColor(Color("MercuryList"))
+                    .neumorphicEffect(fillColor: Color("MercuryList"), cornerRdius: 10)
                 }
                 .padding(.top)
                 
@@ -98,21 +100,33 @@ struct ThemesIconesView2: View {
                     Button(action: {
                         appIconServices.changeAppIcon(to: .salmon)
                     }) {
-                        Rectangle()
-                            .cornerRadius(10)
-                            .frame(width: 50, height: 50)
-                            .foregroundColor(Color("RedList"))
-                            .neumorphicEffect(fillColor: Color("RedList"), cornerRdius: 10)
+                        Button(action: {
+                            appIconServices.changeAppIcon(to: .black)
+                        }) {
+                            Image("salmonwithoutbg")
+                                .resizable()
+                                .frame(width: 50, height: 50)
+                        }
+                        .cornerRadius(10)
+                        .frame(width: 60, height: 60)
+                        .foregroundColor(Color("MercuryList"))
+                        .neumorphicEffect(fillColor: Color("MercuryList"), cornerRdius: 10)
                     }
                     
                     Button(action: {
                         appIconServices.changeAppIcon(to: .green)
                     }) {
-                        Rectangle()
-                            .cornerRadius(10)
-                            .frame(width: 50, height: 50)
-                            .foregroundColor(Color("SeaList"))
-                            .neumorphicEffect(fillColor: Color("SeaList"), cornerRdius: 10)
+                        Button(action: {
+                            appIconServices.changeAppIcon(to: .black)
+                        }) {
+                            Image("greenwithoutbg")
+                                .resizable()
+                                .frame(width: 50, height: 50)
+                        }
+                        .cornerRadius(10)
+                        .frame(width: 60, height: 60)
+                        .foregroundColor(Color("MercuryList"))
+                        .neumorphicEffect(fillColor: Color("MercuryList"), cornerRdius: 10)
                     }
                 }
                 .padding(.top)
