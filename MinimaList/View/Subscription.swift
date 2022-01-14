@@ -67,42 +67,63 @@ struct Subscription: View {
                     }
                     .padding(.vertical)
                     
-                    HStack {
-                        VStack {
-                            Text("Subscribe")
-                                .font(.body)
-                                .bold()
-                                .padding(.top, 10)
-                                .padding(.bottom, 1)
-                            
-                            Text("1,25€ / month (15€ / year)")
-                                .font(.body)
-                                .padding(.bottom, 10)
-//                                .padding(.top, 1)
+                    if storeManager.skProducts.count == 2 {
+                        
+                        HStack {
+                            Button {
+                                let current = storeManager.subscribePerMonth
+                                
+                                let payment = SKPayment(product: current)
+                                SKPaymentQueue.default().add(payment)
+                            } label: {
+                                VStack {
+                                    Text(storeManager.subscribePerMonth.localizedTitle)
+                                        .font(.body)
+                                        .bold()
+                                        .padding(.top, 10)
+                                        .padding(.bottom, 1)
+                                    
+                                    Text("\(storeManager.getPriceLocal(sKProduct: storeManager.subscribePerMonth)) / month")
+                                        .font(.body)
+                                        .padding(.bottom, 10)
+        //                                .padding(.top, 1)
+                                }
+                                .frame(width: UIScreen.main.bounds.width / 1.1)
+                                .neumorphicEffect(fillColor: Color("MercuryList"), cornerRdius: 10)
+                                .padding(.vertical)
+                            }
+
                         }
-                    }
-                    .frame(width: UIScreen.main.bounds.width / 1.1)
-                    .neumorphicEffect(fillColor: Color("MercuryList"), cornerRdius: 10)
-                    .padding(.vertical)
-                    
-                    HStack {
-                        VStack {
-                            Text("Subscribe annualy")
-                                .font(.body)
-                                .bold()
-                                .padding(.top, 10)
-                                .padding(.bottom, 1)
-                            
-                            Text("11€ / year")
-                                .font(.body)
-                                .padding(.bottom, 10)
-//                                .padding(.top, 1)
+                        
+                        
+                        HStack {
+                            Button {
+                                let current = storeManager.subscribePerAnnualy
+                                
+                                let payment = SKPayment(product: current)
+                                SKPaymentQueue.default().add(payment)
+                            } label: {
+                                VStack {
+                                    Text(storeManager.subscribePerAnnualy.localizedTitle)
+                                        .font(.body)
+                                        .bold()
+                                        .padding(.top, 10)
+                                        .padding(.bottom, 1)
+                                    
+                                    Text("\(storeManager.getPriceLocal(sKProduct: storeManager.subscribePerAnnualy)) / year")
+                                        .font(.body)
+                                        .padding(.bottom, 10)
+        //                                .padding(.top, 1)
+                                }
+                                .frame(width: UIScreen.main.bounds.width / 1.1)
+                                .neumorphicEffect(fillColor: Color("BlackList"), cornerRdius: 10)
+                                .padding(.vertical)
+                                .foregroundColor(.white)
+                            }
+
                         }
+                        
                     }
-                    .frame(width: UIScreen.main.bounds.width / 1.1)
-                    .neumorphicEffect(fillColor: Color("BlackList"), cornerRdius: 10)
-                    .padding(.vertical)
-                    .foregroundColor(.white)
                     
                 }
             }

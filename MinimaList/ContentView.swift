@@ -15,6 +15,10 @@ struct ContentView: View {
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationBarHidden(true)
         }
+        
+//        CustomTabView()
+//            .navigationBarTitleDisplayMode(.inline)
+//            .navigationBarHidden(true)
     }
 }
 
